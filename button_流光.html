@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>流光button</title> 
+<style>
+#button {
+  	height: 40px;
+	width:120px;
+  	background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4); 
+	background-size: 400%;
+	border-radius: 10px;
+
+}
+	
+#button:hover::before{
+    animation: sun 8s infinite;
+}
+/* 鼠标经过产生的效果 */
+#button:hover{
+    /* 产生8秒的效果，sun是名称*/
+    animation: sun 8s infinite;
+}
+/* 设置流光 */
+@keyframes sun{
+    100%{
+        /* 以x轴为基准向左移动4个自身大小 */
+        background-position: -400% 0;
+    }
+}
+
+</style>
+</head>
+<body>
+	<button id="button">按钮</button>
+</body>
+</html>
